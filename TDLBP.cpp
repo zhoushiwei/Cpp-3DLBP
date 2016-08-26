@@ -98,7 +98,7 @@ Mat calculate3DLBP(Mat depth_image){
 			// 8 Neighbors visited
 			for (int k = 0; k < 8; k++){
 				// Tests if goes out of image borders
-				if (i + ((index_x)._Myfirst)[k] < 0 || i + ((index_x)._Myfirst)[k] >= depth_image.rows || j + ((index_y)._Myfirst)[k] < 0 || j + ((index_y)._Myfirst)[k] >= depth_image.cols){
+				if (i + index_x[k] < 0 || i + index_x[k] >= depth_image.rows || j + index_y[k] < 0 || j + index_y[k] >= depth_image.cols){
 					neigh.push_back(0);
 				}
 				else{
